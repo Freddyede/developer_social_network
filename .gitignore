@@ -3,3 +3,4 @@ back/dist/
 back/package-lock.json
 front/package-lock.json
 back/src/db.sql
+back/.env
