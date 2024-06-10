@@ -3,6 +3,7 @@ import session from "express-session";
 import cors from 'cors';
 import bodyParser from "body-parser";
 import apiClientRoad from "./api/road";
+import authRoad from "./app/auth/road";
 
 const app: Express = express();
 const port: number = 3000;
@@ -16,8 +17,9 @@ app.use(
     .use(cors({origin: '*'}))
     .use(bodyParser.json());
 app
+    .use('/', authRoad)
     .use('/api', apiClientRoad);
 
 app.listen(port, () => {
-    console.log(`http://localhost:${port}/api`);
+    console.log(`http://localhost:${port}/api/presentation`);
 })

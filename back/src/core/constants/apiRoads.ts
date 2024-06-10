@@ -1,17 +1,17 @@
 export const apiRoads = {
     notAuthenticated: [
         {
-            description: 'Create new user',
+            description: 'Register road',
             uri: '/register'
         },
         {
-            description: 'Create new express-session',
+            description: 'Login road',
             uri: '/login'
         }
     ],
     authenticated: [
         {
-            description: 'Get all users of applications',
+            description: 'Users information road',
             uri: '/api/users'
         }
     ]
